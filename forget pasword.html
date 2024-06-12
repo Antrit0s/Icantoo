@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- links -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-W3f+o8E26Ff/x2B5G1h4O+E5gu2gnpTCRjWmgxOdYGtX3xFhhLz25PqgW0D8Jv/wgtCZ/fKTNa5rJcBvJd0eRQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/forget password.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <title>Forget Password</title>
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+        <!-- Nav bar -->
+        <nav class="nav">
+            <div class="nav-logo">
+                <!-- logo -->
+                <p>I Can Too</p>
+            </div>
+            <!-- navigation bar -->
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="link">Home</a></li>
+                    <li><a href="contact.html" class="link">Contact</a></li>
+                    <li><a href="register.html" class="link active">Register</a></li>
+                    <li><a href="about.html" class="link">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main content container -->
+        <div class="content-wrapper">
+            <div class="container">
+                <form action="#">
+                    <h2>Forget Password</h2>
+                    <div class="input-text">
+                        <input type="email" required>
+                        <label>Enter Your Email</label>
+                    </div>
+                    <div class="forget">
+                        <label for="remember">
+                            <input type="checkbox" id="remember">
+                            <p>Remember me</p>
+                        </label>
+                    </div>
+                    <button type="button" id="sendEmailButton">Send Email</button>
+                    <div class="register">
+                        <p>Don't have an account? <a href="register.html">Register</a></p>
+                    </div>
+                </form>
+                <!-- New Password and Confirm New Password forms -->
+                <div class="password-container" style="display: none;">
+                    <div class="input-text">
+                        <input type="password" required>
+                        <label>New Password</label>
+                    </div>
+                    <div class="input-text">
+                        <input type="password" required>
+                        <label>Confirm New Password</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="social-icons">
+                    <i class='bx bxl-facebook'></i>
+                    <i class='bx bxl-twitter'></i>
+                    <i class='bx bxl-instagram-alt'></i>
+                    <i class='bx bxl-linkedin'></i>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

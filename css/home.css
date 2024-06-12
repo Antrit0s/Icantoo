@@ -1,0 +1,425 @@
+/* POPPINS FONT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* Change the shape of the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track:hover {
+  background-color: transparent;
+}
+body {
+  background: url("/images/image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 110vh;
+  background-color: rgba(39, 39, 39, 0.3);
+  overflow-y: auto;
+  max-height: calc(100vh - 50px);
+}
+main {
+  padding: 20px;
+}
+.nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  background: linear-gradient(rgba(39, 39, 39, 0.6), transparent);
+  z-index: 100;
+}
+.nav-logo p {
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+}
+.nav-menu ul {
+  display: flex;
+}
+.nav-menu ul li {
+  list-style-type: none;
+}
+.nav-menu ul li .link {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  padding-bottom: 15px;
+  margin: 0 25px;
+}
+.link:hover,
+.active {
+  border-bottom: 2px solid #fff;
+}
+.nav-button .btn {
+  width: 130px;
+  height: 40px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.nav-menu .dropdown i {
+  color: #fff;
+}
+.btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+#registerBtn {
+  margin-left: 15px;
+}
+.btn.white-btn {
+  background: rgba(255, 255, 255, 0.7);
+}
+.btn.btn.white-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.nav-menu-btn {
+  display: none;
+}
+li a,
+.dropbtn {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px 15px;
+}
+li.dropdown {
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+section h2 {
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+section p {
+  font-size: 20px;
+  color: #f1f1f1;
+  margin-bottom: 20px;
+}
+/* "Record the sign language gesture" */
+label {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+  display: block;
+}
+/* container of input boxes */
+.input-container label {
+  display: block;
+  margin-bottom: 10px;
+}
+.input-container textarea {
+  width: 350px;
+  height: 200px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+/* Clearfix to prevent layout issues */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#gestureInputRight {
+  background-color: #e8e8e8;
+  color: black;
+}
+/*the button */
+#translateButton {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #4caf50;
+  color: white;
+  margin-top: 0px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#translateButton:hover {
+  background-color: #0056b3;
+}
+.section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.button-container button {
+  margin: 0 10px;
+  padding: 15px 25px;
+  border-radius: 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button-container button:hover {
+  background-color: #2980b9;
+}
+/* history */
+.history-container {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  background-color: rgba(39, 39, 39, 0.9);
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 200;
+  padding: 20px;
+}
+/* Show the sidebar */
+.history-container.visible {
+  right: 0;
+}
+.history-container label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+}
+.history-container {
+  display: none;
+}
+.history-container.visible {
+  display: block;
+}
+.history-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  overflow-y: auto;
+  background-color: #fff;
+  color: #333;
+}
+.history-textarea ul {
+  list-style: none;
+  padding: 0;
+}
+.history-textarea li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+.history-container ::-webkit-scrollbar {
+  width: 8px;
+}
+.history-container ::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+.history-container ::-webkit-scrollbar-track:hover {
+  background-color: transparent;
+}
+.favorite-container {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  background-color: rgba(39, 39, 39, 0.9);
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 200;
+  padding: 20px;
+}
+.favorite-container.visible {
+  left: 0;
+}
+.favorite-container label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+}
+.favorite-container {
+  display: none;
+}
+.favorite-container.visible {
+  display: block;
+}
+.history-textarea,
+.favorite-container .history-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  overflow-y: auto;
+  background-color: #fff;
+  color: #333;
+}
+.history-textarea ul,
+.favorite-container .history-textarea ul {
+  list-style: none;
+  padding: 0;
+}
+.history-textarea li,
+.favorite-container .history-textarea li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+/* Optional: style the scrollbar within the sidebar */
+.favorite-container ::-webkit-scrollbar {
+  width: 8px;
+}
+.favorite-container ::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+.favorite-container ::-webkit-scrollbar-track:hover {
+  background-color: transparent;
+}
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-content p {
+  margin-right: 10px;
+}
+.social-icons {
+  cursor: pointer;
+  display: flex;
+}
+.social-icons i {
+  font-size: 24px;
+  color: white;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+.social-icons i:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+@media only screen and (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+  }
+  .button-container button {
+    margin: 10px 0;
+  }
+}
+@media only screen and (max-width: 786px) {
+  .nav-button {
+    display: none;
+  }
+  .nav-menu.responsive {
+    top: 100px;
+  }
+  .nav-menu {
+    position: absolute;
+    top: -800px;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.9);
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: 0.3s;
+    z-index: 100;
+  }
+  .nav-menu ul {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-menu ul li {
+    margin-top: 40px;
+  }
+  .nav-menu-btn {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+  }
+  .nav-menu-btn i {
+    display: block;
+    color: #fff;
+    margin-top: 25px;
+  }
+  .nav-menu ul li .link {
+    color: #fff;
+    padding-bottom: 0px;
+    margin: 0;
+    font-size: 20px;
+  }
+}
