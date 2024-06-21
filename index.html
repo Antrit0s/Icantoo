@@ -8,6 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/home.css">
     <title>Home</title>
 </head>
@@ -32,7 +33,6 @@
                 </ul>
             </div>
             <!-- sign In & up button -->
-
             <div class="nav-menu-btn">
                 <i class="bx bx-menu" onclick="myMenuFunction()"></i>
             </div>
@@ -51,14 +51,19 @@
                 <p>Translate sign language gestures to text with our advanced translation system.</p>
                 <div class="input-container">
                     <label for="gestureInputLeft">Record sign language gesture:</label>
-                    <textarea id="gestureInputLeft" class="gesture-input" placeholder="Type here..."></textarea>
-                    <textarea id="gestureInputRight" class="gesture-input" placeholder="Type here..."></textarea>
+                    <div class="text-area-trans d-flex flex-column flex-md-row">
+                        <textarea id="gestureInputLeft" class="gesture-input" placeholder="Type here..."></textarea>
+                        <textarea id="gestureInputRight" class="gesture-input" placeholder="Type here..."></textarea>
+                    </div>
                 </div>
+                <!-- container for dynamically added file input -->
+                <div id="fileInputContainer"></div>
                 <!-- button container -->
                 <div class="button-container">
                     <button id="translateButton">Translate</button>
                     <button id="history">History</button>
-                    <button id="favorite">favourite</button>
+                    <button id="favorite">Favourite</button>
+                    <button id="switchButton">Switch to Text</button>
                 </div>
                 <!-- History textareas -->
                 <div class="history-container" id="historySection">

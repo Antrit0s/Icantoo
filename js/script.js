@@ -133,3 +133,48 @@ function myMenuFunction() {
        x.style.opacity = 0;
        y.style.opacity = 1;
    }
+
+// Function to switch between sign and text input
+function switchInputMode() {
+    const gestureInputLeft = document.getElementById('gestureInputLeft');
+    const gestureInputRight = document.getElementById('gestureInputRight');
+    const switchButton = document.getElementById('switchButton');
+    const fileInputContainer = document.getElementById('fileInputContainer');
+
+    if (gestureInputLeft.style.display === 'none') {
+        // Show gesture input, hide text input, remove file input
+        gestureInputLeft.style.display = 'block';
+        gestureInputRight.style.display = 'block';
+        switchButton.textContent = 'Switch to Text';
+        if (fileInputContainer.firstChild) {
+            fileInputContainer.removeChild(fileInputContainer.firstChild);
+        }
+    } else {
+        // Hide gesture input, show text input, add file input
+        gestureInputLeft.style.display = 'none';
+        gestureInputRight.style.display = 'none';
+        switchButton.textContent = 'Switch to Sign';
+        const fileInput = document.createElement('input');
+        fileInput.type = 'file';
+        fileInput.id = 'fileInput';
+        fileInput.classList.add('form-control'); // Add the class here
+        fileInputContainer.appendChild(fileInput);
+    }
+}
+
+// Event listener for the switch button
+document.getElementById('switchButton').addEventListener('click', switchInputMode);
+
+// Initial state (show gesture input)
+document.getElementById('gestureInputLeft').style.display = 'block';
+document.getElementById('gestureInputRight').style.display = 'block';
+document.getElementById('switchButton').textContent = 'Switch to Text';
+
+
+// Event listener for the switch button
+document.getElementById('switchButton').addEventListener('click', switchInputMode);
+
+// Initial state (show gesture input)
+document.getElementById('gestureInputLeft').style.display = 'block';
+document.getElementById('gestureInputRight').style.display = 'block';
+document.getElementById('switchButton').textContent = 'Switch to Text';
